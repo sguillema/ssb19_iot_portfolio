@@ -1,12 +1,12 @@
 # My Portfolio
 ---
 
+## Introduction
 <div class="container-split">
   <div class='img-container'>
     <img src="./.vuepress/public/me.png" />
   </div>
   <div>
-    <h2 id="introduction">Introduction</h2>
     <p>Hi, my name is Sebastian. I am 21 years old. I am studying Engineering, majoring in Software. I am in my fifth year.
     This is a picture of me!</p>
   </div>

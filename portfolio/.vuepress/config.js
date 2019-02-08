@@ -8,6 +8,7 @@ module.exports = {
     sidebar: [
       ['/', 'Home'],
       ['/blog/', 'Blog']
-    ]
+    ],
+    sidebarDepth: 2
   }
 }
