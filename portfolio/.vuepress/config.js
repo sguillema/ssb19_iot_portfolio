@@ -7,7 +7,7 @@ module.exports = {
     navbar: true,
     sidebar: [
       ['/', 'Home'],
-      ['/sprints/', 'Sprints']
+      ['/blog/', 'Blog']
     ]
   }
 }
