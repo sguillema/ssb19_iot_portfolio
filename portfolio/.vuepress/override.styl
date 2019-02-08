@@ -4,3 +4,27 @@ $textColor = #2c3e50
 $borderColor = #eaecef
 $codeBgColor = #282c34
 $arrowBgColor = #ccc
+
+.container-split {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-container {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 20px 20px 20px 0;
+  width: 500px;
+
+  >img {
+    box-shadow: 0px 0px 5px -3px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    filter: grayscale(20%);
+    &:hover {
+      transform: scale(1.05);  
+      box-shadow: 0px 0px 15px -3px rgba(0,0,0,0.3);  
+      filter: grayscale(0);  
+    }
+  }
+}

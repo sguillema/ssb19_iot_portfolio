@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  title: 'My Portfolio',
+  title: 'Sebastian\'s Portfolio - Summer Studio B 2019',
   description: 'Summer Studio B 2019 - IoT Portfolio',
   themeConfig: {
     navbar: true,
