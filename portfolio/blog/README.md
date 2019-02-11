@@ -21,6 +21,9 @@ mkdir projects
 cd projects
 git clone https://github.com/sguillema/ssb19_iot_be
 ```
+Before I run the server, there is one thing I need to do, and that's to create a config file that **wasn't** committed into the backend repo. This repo contains the credentials to access the database that is storing the MQTT broker's data. The reason I do not commit this online is due to security. With that said, I manually created a config file using vim in terminal. I added in my credentials then saved the config.
+
+
 After that, I ran the server.
 ```
 npm i
