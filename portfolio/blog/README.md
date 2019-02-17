@@ -90,13 +90,13 @@ I worked on the API layer with Callum a bit early in the week, helping him set u
 
 Before we could actually link the data straight to metabase though, our data had to be properly formatted in the database. My team had a meeting to establish a protocol for our messaging services to consolidate our budget for messaging (IoT devices are low power, and as a result cannot afford to send big packets so often) and also so that data could be universally interpreted, no matter what device or sensor type. A key decision in our data structure were the following factors:
 - We should share the same collection in our database
-- We wouldn all use the same broker for out IoTs
+- We would all use the same broker for out IoTs
 - Data would be filtered out by a key representing our IoT devices
 
-After consulting everyone for how many digits their readings would take, came to a rough first draft of our messaging protocol. It would later be developed into a Wiki on our Microsoft Team from which we could freely modify, as we would need to update definitions as we went.
+After consulting everyone for how many digits their readings would take, we came to a rough first draft of our messaging protocol. It would later be developed into a Wiki on our Microsoft Team from which we could freely modify, as we would need to update definitions as we went.
 
 ![Messaging Protocol](../.vuepress/public/spr2_messagingprotocol.png)
-*The messaging protocol at the end of sprint 2*
+*Above: The messaging protocol at the end of sprint 2*
 
 ![Dictionary](../.vuepress/public/spr2_dictionary.png)
 *The symbol dictionary the team created; to make sure we did not overlap our data*
@@ -243,7 +243,7 @@ if (packet.payload && Buffer.isBuffer(packet.payload)) {
 ```
 *Condition now also checks if the payload's type is a byte array (aka buffer)* 
 
-The last change I made to the broker in the sprint was to process sensor reading values that needed a decimal point somewhere. Our messaging procotol only takes 3 digits, all of which are to be numbers. So if there was any decimal point in the original reading, the sender would need to omit it before sending the payload (they can just multiply their number by 10^n for example). Again, the reasoning for this is to maintain our standard, and to minimise byte wastage. Now, the problem with this was that the 3-digit number would be written straight into the database, this meant some data representations would have their results multipled by however amount. To fix this. the broker needed to place this decimal place back correctly before writing the reading to the DB. Fortunately, we could determine if this was needed just by looking at the sensor type symbol in the packet payload we received. Here is code providing this functionality:
+The last change I made to the broker in the sprint was to process sensor reading values that needed a decimal point somewhere. Our messaging procotol only takes 3 digits, all of which are to be numbers. So if there was any decimal point in the original reading, the sender would need to omit it before sending the payload (they can just multiply their number by 10^n for example). Again, the reasoning for this is to maintain our standard, and to minimise byte wastage. Now, the problem with this was that the 3-digit number would be written straight into the database, this meant some data representations would have their results multipled by however amount. To fix this. the broker needed to place this decimal back correctly before writing the reading to the DB. Fortunately, we could determine if this was needed just by looking at the sensor type symbol in the packet payload we received. Here is code providing this functionality:
 
 ```javascript
 let formattedReading = Number(payload.slice(9, 12))
