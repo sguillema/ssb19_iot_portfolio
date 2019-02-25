@@ -263,16 +263,34 @@ Lastly in the sprint, I worked on my physical prototype. I moved away from the I
 
 Overall, it was a good week of progress :tada::tada:. Hopefully by having this infrastructure set up, everyone's work on in my team on their physical devices can be accelerated.
 
-Hopefully next week I will receive the water pump I requisitioned. I will attempt to control it via. remote control signal, using data from the soil moisture sensors as a catalyst. I will also properly implement the messageing protocol for recieving control signals on the devices, as for the prototype this sprint, it was ad hoc and did not follow the protocol.
+Hopefully next week I will receive the water pump I requisitioned. I will attempt to control it via. remote control signal, using data from the soil moisture sensors as a catalyst. I will also properly implement the messaging protocol for receiving control signals on the devices, as for the prototype this sprint, it was ad hoc and did not follow the protocol.
 
 
 #### Additional Artifacts
 > Team Leonidas Wiki <https://teams.microsoft.com/l/channel/19%3A31be4fdb77534283845d9eadbd0791d8%40thread.skype/tab%3A%3A0a02e5f4-89e4-476e-a099-4ec1c69606c9> (Requires access to Microsoft Teams)
 
 
-<!-- ## Sprint 3
+## Sprint 3
+For this week, I moved away from the ESP dev board completely, and moved towards a relay module with an ESP8266-01 board attached. The module will allow me to remotely toggle a current that the relay is attached to. Electronics is definitely not my strong point at all in this studio, so the progress was slow as I figured out how to do things.
 
-#### Artifacts -->
+I started this week by uploading firmware to the ESP8266-01 module. I first tried using an Arduino Uno's usb capabilities to program the module, however there were a lot of complications due to the already existing mcu on the Arduino. After a bit of struggle, I was given a usb-to-serial module which I could connect my ESP module to my laptop via. USB. This was **much** easier to work with, and I found success with it shortly after.
+![USB to Serial with my ESP](../.vuepress/public/spr3_usbupload.jpg)
+
+Afterwards, I sought to get the actual relay working. I've never worked with a relay before and didn't really know what it was, but after some reading, I got the gist of it. Powering it was very simple, but connecting it a current it could control was a bit different. Fortunately in the beginning of that week, Danon had provided me with a water pump I could use for my prototype. I connected this water pump to the relay and set out to test it. There was one small problem though; the pump can't operate without being submerged in water. *Now*, being in a lab where water was prohibited, I had to take my experiment elsewhere. The local staff kitchen seemed like a convenient location. Once I was there, with some help with Danon, I was able to conduct the test...
+![The water pump test](../.vuepress/public/spr3_test.jpg)
+*The setup for the water pump test*
+
+(Video of test goes here)
+
+Concluding the test, it was great to see the relay working correctly, and being able to be controlled remotely. However, there was an issue that arose; that being the water pressure from the pump. After researching a bit (this site was very useful! <https://www.irrigationtutorials.com/using-a-smaller-pipe-to-increase-water-pressure/>), the solution at the time seemed to be to increase the diameter of our tubing. With that said though, the pump works adequately if it is gravity assisted. I am leaving this design problem to next week's sprint.
+
+The last thing I did for the prototype this week was to miniaturise it. In the sink tests, the relay was powered by an Arduino, connected via. usb. For portability purposes, this relay needed to be independent of the arduino board, as it was an overhead resource because it was only being used for power. For a power source, I just used a 6v battery pack that takes in 4 AAA batteries. This worked well, however there was no mechanism in place to shut power down the relay without removing a battery. I required a switch for this. I did some small testing with a slide switch and put in an order for a toggle switch that is easier to install and solder onto. In the meantime, I built a temporary circuit with an LED in place of the switch.
+![Small scale prototype](../.vuepress/public/spr3_prototype.jpg)
+
+There wasn't really any software work for this sprint. Though I'm slow on the hardware side, it was very fun to explore and learn about as I went, even if there was a deal of trial and error -- as with any learning. Next week I will be wrapping up my prototype and building an enclosure for it and then integrating it with Callum's soil sensors using the correct protocol.
+
+#### Artifacts
+> No extras!
 
 <!-- ## Sprint 4
 
