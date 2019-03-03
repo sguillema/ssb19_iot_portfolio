@@ -22,7 +22,6 @@ I would like to deepen my understanding of IoT product design, not just conceptu
 ### Learning Goals
 - Learn more about the real-time technologies used in IoT systems, such as MQTT and the ESP8266 WiFi MCU.
 - Apply said technologies so consolidate my understanding
-- Learn about containerisation of code for deployments via. Docker and how to do it
 - Re-learn more about programming microcontrollers (I did one subject on it, but it was in my second year)
 - Re-learn electronics (I did introductory subjects in my first couple of years)
 

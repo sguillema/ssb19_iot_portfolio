@@ -280,7 +280,7 @@ Afterwards, I sought to get the actual relay working. I've never worked with a r
 ![The water pump test](../.vuepress/public/spr3_test.jpg)
 *The setup for the water pump test*
 
-(Video of test goes here)
+A video of the test can be seen here: <https://photos.app.goo.gl/5dPEGhvP9QmsVqSz9>
 
 Concluding the test, it was great to see the relay working correctly, and being able to be controlled remotely. However, there was an issue that arose; that being the water pressure from the pump. After researching a bit (this site was very useful! <https://www.irrigationtutorials.com/using-a-smaller-pipe-to-increase-water-pressure/>), the solution at the time seemed to be to increase the diameter of our tubing. With that said though, the pump works adequately if it is gravity assisted. I am leaving this design problem to next week's sprint.
 
@@ -292,6 +292,26 @@ There wasn't really any software work for this sprint. Though I'm slow on the ha
 #### Artifacts
 > No extras!
 
-<!-- ## Sprint 4
+## Sprint 4
+Throughout the last 4 weeks, I feel that I have been able to meet my learning objectives. I've garnered some fantastic insight on the technology of IoTs and how they are not just used, but also made. This newfound confidence in understanding the technology now allows me to consider IoTs as a solution tool in future problems ahead. I've also had the pleasure to relearn about electronics and microcontroller programming! Wiring up my own prototype with multiple components and then flashing the ESP microcontroller has been a fun experience. I think I know enough to actually develop my own IoT products now, which I think is something invaluable that I have gained through my time in the studio.
 
-#### Artifacts -->
+As much as I enjoyed the studio, there are still some subject learning objectives that must be met. Fortunately, I believe I have met all of them throughout the last 4 weeks!
+
+For SLO 1 *Engage with stakeholders to identify a problem or scope a defined problem*, in Sprint 1, I was given some insight into IoTs through building a Data Logger provided by the studio tutor. This initial insight was important as I didn't really understand the potential and scope of IoT technology. After having a very elementary understanding, we were given time to let our imaginations run loose with potential solutions we could build in 4 weeks using what we have just learned. We discussed at the end of the week all of our identified problems and gave feedback to each other on what we believe could be changed to help provide stronger basis for pursuing it.
+
+For SLO 2 *Apply design and systems thinking to respond to a defined or newly identified problem*, this was demonstrated through the whole duration of the studio. In the design thinking process, we were able to iteratively work on our projects through prototype and testing each week. Our objective at the end of every week was to work on our prototype and have something to show for it, so that we wouldn't stagnate in progress and development. From this in week 3:
+![Sink prototype](../.vuepress/public/spr4_proto1.jpg)
+
+To this at the end of the studio:
+![Final](../.vuepress/public/spr4_proto2.jpg)
+
+For SLO 3 *Apply technical skills to develop, model and/or evaluate designs*, this was demonstrated throughout the whole studio -- namely it can be seen in my week 2 artifacts.
+
+For SLO 4 *Demonstrate effective collaboration and communication skills*, the studio leveraged Microsoft Teams to facilitate discussion and collaboration individually and in between teams. Also, every Friday the studio would convene in the afternoon to do something akin to a show-and-tell, where we talked about what we did in the last week and shared how we did it, so as to help others who may be experiencing similar difficulties.
+![Microsoft Teams](../.vuepress/public/spr4_teams.png)
+
+For SLO 5 *Conduct critical self, peer, and group review and performance evaluation*, this portfolio is an artifact for it. Also, as mentioned in the previous SLO, we had a peer discussion at the end of every week which we worked on in the following sprint.
+
+
+#### Artifacts
+> My prototype before I placed it inside of my 3d printed enclosure ![Prototype bare](../.vuepress/public/spr4_beforeenclosure.jpg)
